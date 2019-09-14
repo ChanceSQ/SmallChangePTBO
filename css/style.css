@@ -9,7 +9,7 @@ body {
 }
 
 :root {
-  --max-width: 100%;
+  --max-width: 1100px;
   --primary-color: #3f4359;
   --secondary-color: #ff6a48;
   --light-color: #eaeaea;

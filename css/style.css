@@ -1,0 +1,388 @@
+/* Utilities */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("/img/hands.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+:root {
+  --max-width: 100%;
+  --primary-color: #3f4359;
+  --secondary-color: #ff6a48;
+  --light-color: #eaeaea;
+  --dark-color: #1b1c24;
+  --purp-color: rgb(119, 91, 148);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: var(--max-width);
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--purp-color);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.bg-light {
+  background-color: var(--light-color);
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+/* NAV */
+#main-nav {
+  background: rgba(63, 67, 89, 0.78);
+  top: 0px;
+  position: sticky;
+  width: var(--max-width);
+}
+
+#main-nav-content {
+  display: flex;
+  padding: 0 3rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#main-nav img {
+  filter: drop-shadow(0px 0.5px var(--dark-color))
+    drop-shadow(0.5px 0px var(--dark-color))
+    drop-shadow(0px 0px 2px var(--dark-color));
+  height: 100px;
+  width: auto;
+  margin: 0.3rem;
+}
+
+#main-nav ul {
+  justify-self: end;
+  display: flex;
+  list-style: none;
+}
+
+ul li a {
+  color: var(--light-color);
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 0.8rem;
+  padding-left: 2rem;
+}
+
+ul li a:hover {
+  color: var(--light-color);
+  filter: brightness(75%);
+}
+
+.active {
+  color: var(--light-color);
+  filter: brightness(75%);
+}
+
+/* Section A : Showcase */
+.showcase {
+  background: rgba(27, 28, 36, 0.22);
+  display: grid;
+  height: 100vh;
+  margin: 0;
+  place-items: center center;
+  color: #ffffff;
+}
+
+#showcase-content h2 {
+  font-variant-caps: all-petite-caps;
+  font-size: 2.25rem;
+}
+
+#showcase-content h1 {
+  font-variant-caps: all-petite-caps;
+  font-size: 7rem;
+  line-height: 0.8;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.btn-donate {
+  background: var(--secondary-color);
+  color: var(--light-color);
+  border-radius: 5px;
+  margin: 0rem 0.5rem 0rem 0.5rem;
+  padding: 0rem 0.1rem 0rem 0.1rem;
+}
+
+.btn-donate:hover {
+  background: var(--purp-color);
+  color: var(--light-color);
+}
+
+/* White Strip */
+.strip {
+  max-width: var(--max-width);
+  padding-left: 10%;
+  padding-right: 10%;
+  height: 200px;
+}
+
+.strip #container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 100%;
+  place-items: center center;
+}
+
+.strip #container h1 {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: var(--primary-color);
+  padding-right: 50px;
+}
+
+.strip #container .info {
+  grid-column: 2;
+  grid-row: 1;
+  line-height: 1.75rem;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+}
+
+.strip #container .card {
+  grid-column: 3;
+  grid-row: 1;
+  background-color: var(--dark-color);
+  height: 160px;
+  width: 160px;
+  font-size: 0.7rem;
+  color: var(--light-color);
+  text-align: center;
+}
+
+i.fas {
+  font-size: 5rem;
+  color: var(--purp-color);
+  margin-top: 1rem;
+}
+
+.strip #container .card #card-content-1 h3 {
+  font-family: "Kaushan Script", cursive;
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+.strip #container .card #card-content-2 h3 {
+  font-family: "Kaushan Script", cursive;
+  font-weight: 100;
+  font-size: 3rem;
+  margin-top: 1.2rem;
+}
+
+.strip #container .card #card-content-2 p {
+  font-size: 0.8rem;
+}
+
+.strip #container .card #card-content-2 {
+  display: none;
+}
+
+.strip #container .card:hover #card-content-1 {
+  display: none;
+}
+
+.strip #container .card:hover #card-content-2 {
+  display: block;
+}
+
+/* Community Events */
+#image-strip {
+  margin-top: 20px;
+  background-image: url("/img/peterborough-downtown.jpg");
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.grid-container {
+  display: grid;
+  max-width: 900px;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0;
+}
+
+.community-events {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: var(--light-color);
+  padding-right: 50px;
+  background: var(--purp-color);
+  padding-bottom: 200px;
+}
+
+.community-events-p {
+  grid-column: 1;
+  grid-row: 2;
+  line-height: 1.75rem;
+  font-size: 0.9rem;
+  padding: 15px;
+  color: var(--light-color);
+  background: var(--primary-color);
+  text-align: left;
+}
+
+.box1 {
+  background: rgba(119, 91, 148, 0.9);
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.box2 {
+  background: rgba(63, 67, 89, 0.9);
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.community-events-img {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  margin: 10px;
+  background-image: url("/img/community-event-img.PNG");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+
+.flex-strip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.donate-icon i {
+  font-size: 4em;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.donate-btn {
+  font-size: 1.5em;
+  font-weight: bolder;
+  color: #3f4359;
+  font-variant-caps: all-petite-caps;
+  padding: 10px 60px 10px 60px;
+  box-shadow: 5px 8px #3f4359;
+  border: #3f4359 3px solid;
+}
+
+.donate-btn:hover {
+  color: var(--light-color);
+  background: rgba(63, 67, 89, 0.78);
+}
+
+#newsletter-strip {
+  color: #ffffff;
+  padding: 50px;
+  font-weight: bolder;
+  font-variant-caps: all-petite-caps;
+}
+
+.sub-form #email {
+  border: none;
+  background: rgb(237, 80, 43);
+  height: 30px;
+  width: 400px;
+}
+
+::placeholder {
+  color: var(--light-color);
+  padding-left: 10px;
+}
+
+.sub-form #subscribe {
+  border: none;
+  background: var(--primary-color);
+  height: 30px;
+  width: 150px;
+  color: #ffffff;
+  font-weight: bold;
+  font-variant-caps: all-petite-caps;
+  font-size: 1rem;
+}
+
+/* Footer */
+.grid-strip {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.grid-strip h2 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.grid-strip p {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.grid-strip .social {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.contact-form #name {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.contact-form #email {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.contact-form #message {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.contact-form button {
+  grid-column: 2;
+  grid-row: 4;
+}

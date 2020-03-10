@@ -24,7 +24,7 @@ body {
 }
 
 .container {
-  width: var(--max-width);
+  width: 80%;
   margin: auto;
   padding: 0 2rem;
   overflow: hidden;
@@ -128,7 +128,6 @@ ul li a:hover {
 
 .social {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
@@ -150,44 +149,46 @@ ul li a:hover {
 
 /* White Strip */
 .strip {
-  max-width: 100%;
-  padding-left: 10%;
-  padding-right: 10%;
-  height: 200px;
+  width: 100%;
+  /* padding-left: 10%;
+  padding-right: 10%; */
+  height: auto;
+  padding: 10px;
 }
 
 .strip #container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  height: 100%;
-  place-items: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .strip #container {
+    flex-direction: column;
+  }
 }
 
 .strip #container h1 {
-  grid-column: 1;
-  grid-row: 1;
   font-size: 2.5rem;
   font-weight: bolder;
   color: var(--primary-color);
-  padding-right: 50px;
 }
 
 .strip #container .info {
-  grid-column: 2;
-  grid-row: 1;
   line-height: 1.75rem;
   font-size: 0.9rem;
   color: var(--primary-color);
+  width: 400px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .strip #container .card {
-  grid-column: 3;
-  grid-row: 1;
   background-color: var(--dark-color);
+  color: var(--light-color);
   height: 160px;
   width: 160px;
   font-size: 0.7rem;
-  color: var(--light-color);
   text-align: center;
 }
 
@@ -355,18 +356,28 @@ i.fas {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   color: var(--light-color);
 }
 
 .f-content div {
   margin: 0px 50px;
+  text-align: left;
 }
 
-.social a {
+.social-footer {
+  display: flex;
+  padding-left: 10%;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.social-footer a {
   margin: 20px;
   color: var(--light-color);
 }
 
-.social a:hover {
+.social-footer a:hover {
   color: var(--secondary-color);
 }

@@ -132,7 +132,6 @@ ul li a:hover {
   align-items: center;
   font-size: 1.5rem;
   margin-top: 1rem;
-  border: 2px solid blue;
 }
 
 .btn-donate {
@@ -359,7 +358,6 @@ i.fas {
   align-items: center;
   flex-wrap: wrap;
   color: var(--light-color);
-  border: 2px solid green;
 }
 
 .f-content div {
@@ -373,7 +371,6 @@ i.fas {
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
-  border: 2px solid blue;
 }
 
 .social-footer a {

@@ -162,12 +162,6 @@ ul li a:hover {
   align-items: center;
 }
 
-@media only screen and (max-width: 600px) {
-  .strip #container {
-    flex-direction: column;
-  }
-}
-
 .strip #container h1 {
   font-size: 2.5rem;
   font-weight: bolder;
@@ -231,7 +225,7 @@ i.fas {
 #image-strip {
   margin-top: 20px;
   background-image: url("/img/peterborough-downtown.jpg");
-  height: 500px;
+  min-height: 500px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -380,4 +374,43 @@ i.fas {
 
 .social-footer a:hover {
   color: var(--secondary-color);
+}
+
+@media only screen and (max-width: 900px) {
+  #main-nav-content {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    padding: 0;
+    margin: 0.5em auto;
+  }
+
+  #main-nav .container {
+    padding: 0;
+    margin: 0;
+  }
+
+  .strip #container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .community-events-img,
+  .box1,
+  .box2 {
+    display: none;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .community-events {
+    text-align: center;
+    padding: 0.5em;
+  }
+
+  .community-events-p {
+    padding: 3em;
+  }
 }

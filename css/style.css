@@ -376,6 +376,29 @@ i.fas {
   color: var(--secondary-color);
 }
 
+/* Gallery */
+.gallery-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.gallery-item {
+  width: 500px;
+  height: 350px;
+  background-size: cover;
+  background-position: center center;
+  margin-top: 2em;
+}
+
+.bottom {
+  background-position: bottom;
+}
+
+.top {
+  background-position: top;
+}
+
 @media only screen and (max-width: 900px) {
   #main-nav-content {
     display: flex;

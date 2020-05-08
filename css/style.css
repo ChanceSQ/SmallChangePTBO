@@ -419,9 +419,9 @@ i.fas {
     width: 100vw;
   }
 
-  .strip #container {
+  .strip #strip-container {
     flex-direction: column;
-    texstrip-t-align: center;
+    text-align: center;
   }
 
   .community-events-img,
